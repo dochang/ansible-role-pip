@@ -1,6 +1,8 @@
 pip
 ===
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-dochang.pip-blue.svg)](https://galaxy.ansible.com/dochang/pip/)
+
 An ansible role to ensure pip present.
 
 Requirements
