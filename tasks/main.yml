@@ -6,4 +6,4 @@
   changed_when: false
 
 - include: install.yml
-  when: result is defined and result | failed
+  when: result | failed
