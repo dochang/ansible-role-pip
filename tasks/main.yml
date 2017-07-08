@@ -2,8 +2,8 @@
 - name: check whether pip exists
   shell: command -v pip
   ignore_errors: yes
-  register: result
+  register: pip_installed
   changed_when: false
 
 - include: install.yml
-  when: result | failed
+  when: pip_installed | failed
