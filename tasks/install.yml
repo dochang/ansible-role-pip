@@ -7,6 +7,16 @@
   set_fact:
     pip_install_script_path: '{{ pip_cache_dir }}/get-pip.py'
 
+- name: set pip install script url
+  set_fact:
+    pip_install_script_url: https://bootstrap.pypa.io/get-pip.py
+  when: ansible_python_version is version_compare('2.7', '>=')
+
+- name: set pip install script url
+  set_fact:
+    pip_install_script_url: https://bootstrap.pypa.io/2.6/get-pip.py
+  when: ansible_python_version is version_compare('2.7', '<')
+
 - name: ensure pip cache dir present
   file:
     path: '{{ pip_cache_dir }}'
@@ -16,7 +26,7 @@
   get_url:
     dest: '{{ pip_install_script_path }}'
     force: yes
-    url: https://bootstrap.pypa.io/get-pip.py
+    url: '{{ pip_install_script_url }}'
     validate_certs: yes
 
 - name: run the script
