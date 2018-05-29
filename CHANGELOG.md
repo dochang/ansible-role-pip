@@ -2,6 +2,10 @@
 
 ## [Unreleased] ##
 
+### Changed ###
+
+  - Depends on Ansible 2.4+
+
 ## [1.0.0] - 2018-05-29 ##
 
 ### Added ###
