@@ -5,5 +5,5 @@
   register: pip_installed
   changed_when: false
 
-- include: install.yml
+- include_tasks: install.yml
   when: pip_installed is failed

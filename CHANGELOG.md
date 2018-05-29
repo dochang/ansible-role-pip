@@ -5,6 +5,7 @@
 ### Changed ###
 
   - Depends on Ansible 2.4+
+  - Use new import/include statements
 
 ## [1.0.0] - 2018-05-29 ##
 
